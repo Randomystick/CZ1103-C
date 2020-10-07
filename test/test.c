@@ -2,8 +2,19 @@
 
 int main()
 {
-    printf("%i\n", 49);
-    printf("%c", 49);
+    //printf("%i\n", 49);
+    //printf("%c", 49;
+
+    //int a;
+    //a=3*4%-(6/5);
+    //printf("%d",a);
+
+    //int n=2;
+    //n+=(n-=n*n);
+    //printf("%d\n",n);
+
+    printf("%f", 4.5+5/2);
+
     /*
     char c1,c2,c3,c4,c5,c6;
     scanf("%c%c%c%c",&c1,&c2,&c3,&c4);
