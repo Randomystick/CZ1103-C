@@ -3,18 +3,18 @@
 int main()
 {
 /* QUESTION 1
-1a. char
-1b. int
-1c. float
-1d. string
-1e. hexadecimal
-1f. string
-1g. long
-1h. float
-1i. int
-1j. int
-1k. hexadecimal
-1l. hexadecimal
+1a. char ✅
+1b. int ✅*decimal integer
+1c. float ✅
+1d. string ❌ASCII code in octal for the space, i.e. ''
+1e. hexadecimal ✅+integer (note: 0x92 = 16^1x9 + 16^0x2
+1f. string ❌character (output: alarm escape sequence)
+1g. long ✅*decimal long integer
+1h. float ✅floating-point
+1i. int ✅negative decimal integer
+1j. int ❌octal integer, starts with '0'
+1k. hexadecimal ✅(note: 0XfF4 = 16^2x15 + 16^1x15 + 16^0x4)
+1l. hexadecimal ❌+long integer
 */
 
 

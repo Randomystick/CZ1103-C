@@ -2,6 +2,14 @@
 
 int main()
 {
+    int i,j;
+    while (1)
+    {
+        scanf("%d %d", &i, &j);
+        printf("i is %d j is %d\n", i,j);
+        fflush(stdin);
+    }
+
     //printf("%i\n", 49);
     //printf("%c", 49;
 
@@ -11,9 +19,6 @@ int main()
 
     //int n=2;
     //n+=(n-=n*n);
-    //printf("%d\n",n);
-
-    printf("%f", 4.5+5/2);
 
     /*
     char c1,c2,c3,c4,c5,c6;
