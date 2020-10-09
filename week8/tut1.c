@@ -20,16 +20,16 @@ int main()
 
 /* QUESTION 2
 2a.
-AAAA
+AAAA ✅: the 0101 is octal number 101 which is A. 0x == hexadecimal, 0 == octal.
 
 2b.
-The integer 65 will be printed instead
+The integer 65 will be printed instead ✅
 
 2c.
-)
+) ✅
 
 2d.
-e
+e ✅
 */
 
 
@@ -38,15 +38,14 @@ e
 //printf("%d %d", x, y);
 /* QUESTION 3
 3a.
-The contents in the input buffer will be assigned to x and y as digits separately, determined by whitespace delimiters.
+The contents in the input buffer will be assigned to x and y as digits separately, determined by whitespace delimiters. ✅
 
 3b.
-Warning, then runtime error: scanf expects a pointer to a datatype (int in this case), but an int was supplied instead
+Warning, then runtime error: scanf expects a pointer to a datatype (int in this case), but an int was supplied instead ✅ & == address operator
 
 3c.
-The first digit in the input buffer will be assigned to x as an integer, while y will be unassigned
+The first digit in the input buffer will be assigned to x as an integer, while y will be unassigned ❌The program will wait for the input of two integers separated by one '/', e.g. 23/45
 */
-
 
 //double A = 373737.0;
 //double B;
@@ -54,7 +53,13 @@ The first digit in the input buffer will be assigned to x as an integer, while y
 //printf("The value of B is %f.\n", B);
 /* QUESTION 4
 Floating point numbers such as double are inexact when stored in the machine,
-thus arithmetic operations involving multiple floating points will not be exact i.e. mathematically accurate.
+thus arithmetic operations involving multiple floating points will not be exact i.e. mathematically accurate. ✅
+
+ ✅ A*A*A: very big number
+ ✅ 0.37/A: very small number
+ ✅ A*A*A + 0.37/A would be an approximation of the exact sum. This is called ROUNDOFF ERROR.
+ ✅ Beware, after thousands of successive operations, the total roundoff error can be ridiculously high if care is not taken.
+
 */
 
 
@@ -79,14 +84,14 @@ m * j / j
 = int * int / int
 = 5 * 2 / 2
 = 10 / 2
-= 5
+= 5 (int) ✅
 
 5b.
 m / j * j
 = int / int * int
 = 5 / 2 * 2
 = 2 * 2
-= 4
+= 4 (int) ✅
 
 5c.
 (f+10)*20
@@ -94,17 +99,17 @@ m / j * j
 = (float+float)*float
 = (1.2+10.0)*20.0
 = 11.2*20.0
-= 224.0
+= 224.0 (float) ✅
 
 5d.
 (i++)*n
 = (2++)*5
-= 10; then i = 3
+= 10 (int); then i = 3 ✅
 
 5e.
 i++ * n
 = 2++ * 5
-= 10; then i = 3
+= 10 (int); then i = 3 ✅
 
 5f.
 -12L * (g-f)
@@ -113,25 +118,25 @@ i++ * n
 = long * float
 = float * float
 = -12.0 * 2.2
-= -26.4
+= -26.4 (float) ✅
 
 5g.
 m = n = --j
 m = n = 1
-m and n = 1.
+m and n = 1 and j = 1 (int). ✅go from RHS to LHS. Rightmost RHS = --j = 1. 1 assign to n. n (1) assign to m.
 
 5h.
 (int)g*10
 = int*int
 = 3*10
-= 30
+= 30 (int) ✅
 
 5i.
 (int)(g*10)
 = (int)(float*int)
 = (int)(float*float)
 = (int)(34.0)
-= 34
+= 34 (int) ✅
 
 5j.
 j = i+f
@@ -139,7 +144,7 @@ int = int+float
 int = float+float
 int = 2.0+1.2
 int = 3.2
-j = 3.
+j = 3 (int) ✅
 */
 
 
@@ -160,24 +165,24 @@ j = 3.
 //}
 /* QUESTION 6
 6a.
-Valid, 76 is an integer.
+Valid, 76 is an integer. ✅
 
 6b.
 Invalid, number is not a known value at compile time,
 hence number*2 does not evaluate to an integer or character
-constant at compile time.
+constant at compile time. ❌
 
 6c.
-Valid, SVALUE*2 is 20 which is an integer.
+Valid, SVALUE*2 is 20 which is an integer. ✅
 
 6d.
-Invalid, 80.1 is a float and not an integer
+Invalid, 80.1 is a float and not an integer ✅
 */
 
 
-/* QUESTION 7 ?????????????????????
+/* QUESTION 7
 7a.
-Define DLENGTH to be a smaller value
+Define DLENGTH to be a smaller value ✅
 
 7b.
 Nest the for-count loop in this other for loop:
@@ -186,13 +191,13 @@ for (int i = 0; i < 1000; i++)
     ...
     for (count = -DLENGTH; ...)
     ...
-}
+} ✅
 
 7c.
 Change DLENGTH initiation from preprocessor directive to:
 int DLENGTH
 printf("Enter value of DLENGTH: );
-scanf("%i", DLENGTH);
+scanf("%i", DLENGTH); ✅
 */
 
 
@@ -211,6 +216,9 @@ scanf("%i", DLENGTH);
     //int temp = 0;
     //temp = x;
     //x = y;
-    //y = temp;
+    //y = temp; ✅
+    // ✅first -= second;
+    // ✅second += first;
+    // ✅first = second - first;
     printf("Now x is %i, and y is %i", x, y);
 }
