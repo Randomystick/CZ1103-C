@@ -10,6 +10,11 @@
 // F    44-0
 // Use the sentinel value –1 for student ID to indicate the end of user input.
 // Use the switch statement
+//////////////////////////// ALTERNATIVE:
+// use mark = mark+5, then divide by 10
+// mark can remain as int,
+// and don't need roundedMark as float
+////////////////////////////////////////
 
 #include <stdio.h>
 #include <math.h> //round
@@ -74,7 +79,7 @@ int main()
 */
 
 
-/* QUESTION 2
+///* QUESTION 2
 // Write a C program that reads in several lines of non-negative integer numbers,
 // computes the average for each line and prints out the average. The value –1 in each line
 // of user input is used to indicate the end of input for that line.
@@ -93,7 +98,8 @@ int main()
     fflush(stdin);
 
     // Run the average calculator noOfLines times
-    for (int i = 1; i < noOfLines+1; i++)
+    int i; // MUST DECLARE ITERATOR BEFORE FOR LOOP
+    for (i = 1; i < noOfLines+1; i++)
     {
         //START FOR ONE LINE
         // First (re)set sum and nmbrLength to 0
@@ -106,6 +112,7 @@ int main()
         // do the math
         // until -1 is reached
         while (1==1)
+        // while (nmbrValue != -1)
         {
             scanf("%i", &nmbrValue);
             if (nmbrValue == -1) { break; }

@@ -1,8 +1,7 @@
 # depslib dependency file v1.0
-1602076190 source:c:\.programming\c\cz1103-c\week8\tut1.c
-	<stdio.h>
+1602231382 source:c:\.programming\c\cz1103-c\week8\tut1.c
 
-1602070612 source:c:\.programming\c\cz1103-c\week8\lab1.c
+1602231320 source:c:\.programming\c\cz1103-c\week8\lab1.c
 	<stdio.h>
 	<math.h>
 	<stdio.h>

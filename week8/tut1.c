@@ -1,7 +1,7 @@
-#include <stdio.h>
+//#include <stdio.h>
 
-int main()
-{
+//int main()
+//{
 /* QUESTION 1
 1a. char ✅
 1b. int ✅*decimal integer
@@ -205,14 +205,14 @@ scanf("%i", DLENGTH); ✅
 //#include <stdio.h>
 //int main()
 //{
-    int x,y;
-    printf("x value is: ");
-    scanf("%i", &x);
-    printf("y value is: ");
-    scanf("%i", &y);
-    x = x+y; //now x is the sum of both numbers
-    y = x-y;
-    x = x-y;
+//    int x,y;
+//    printf("x value is: ");
+//    scanf("%i", &x);
+//    printf("y value is: ");
+//    scanf("%i", &y);
+//    x = x+y; //now x is the sum of both numbers
+//    y = x-y;
+//    x = x-y;
     //int temp = 0;
     //temp = x;
     //x = y;
@@ -220,5 +220,6 @@ scanf("%i", DLENGTH); ✅
     // ✅first -= second;
     // ✅second += first;
     // ✅first = second - first;
-    printf("Now x is %i, and y is %i", x, y);
-}
+//    printf("Now x is %i, and y is %i", x, y);
+//}
+
