@@ -98,7 +98,7 @@ void numDigits2(int num, int *result)
     do
     {
         (*result)++;
-        num = num/10;
+        num = num/10; //keep getting the quotient until quotient = 0. This is the number of digits. 123/10 = 12; 12/10 = 1; 1/10 = 0
     } while (num > 0);
 }
 
@@ -111,14 +111,15 @@ int digitPos1(int num, int digit)
     int pos = 0;
     do
     {
-        pos++;
-        if (num%10 == digit)
+        pos++; //...and increase the position by 1
+        if (num%10 == digit) //1. if last digit is the digit that we want
         {
             return pos;
         }
-        num = num/10;
+        num = num/10; //if not, remove the last digit from the number
     } while (num > 0);
 
+    return 0;
 }
 void digitPos2(int num, int digit, int *result)
 {
@@ -146,13 +147,14 @@ int square1(int num)
    // If num = 4, return 4^2 = 1+3+5+7=16
    // If num = 5, return 5^2 = 1+3+5+7+9=25
    int sum = 0;
-   int numCurrent = 1;
+   int numCurrent = 1; //this is the first odd integer
    // for each number in the summation
    int i; for (i = 0; i<num; i++)
    {
        sum += numCurrent; //add the current term to the sum
        numCurrent += 2; //increment the current term by 2 since we only want odd integers
    }
+   //ANS: can also use while (i < num){ ... i++;} instead of for-loop
    return sum;
 }
 void square2(int num, int *result)
