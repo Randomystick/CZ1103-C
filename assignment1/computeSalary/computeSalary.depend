@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1603092222 source:c:\.programming\c\cz1103-c\assignment1\computesalary\computesalary.c
+	<stdio.h>
+

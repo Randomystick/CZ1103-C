@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1603095446 source:c:\.programming\c\cz1103-c\assignment1\extodddigits\extodddigits.c
+	<stdio.h>
+
