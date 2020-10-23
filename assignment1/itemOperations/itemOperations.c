@@ -69,18 +69,42 @@ void insert(int max, int *size, int ar[], int num)
 	/*edit*/
     /* Write your code here */
     // if *size is equal to max before insertion, print "The array is full\n"
-    if (*size )
-    // else pass
-    // iterate through array
-        // if currentNumber more than num,
-        // temp = currentNumber
-        // put num at currentNumber
-        // currentNumber+1 = temp
-        // ...
-        // until everyone is shifted back
-    // *size++
-	/*end_edit*/
+    if (*size == max)
+    {
+        printf("The array is full\n");
+    }
+    else
+    {
+        int temp;
+        int i;
+        int position;
+        for (i = 0; i < *size; i++) //for every element in the array
+        {
+
+            if (num > ar[i]) //number to insert greater than current number pointed to
+            {
+                continue;
+            }
+            else if (num <= ar[i]) //current number pointed to is the place to put num in
+            {
+                position = i;
+                break;
+            }
+        }
+        //we now know we need to insert the num at position
+        int sizeToMove = *size - position;
+        int arrayToMove[sizeToMove];
+        ar[position] = num;
+        int j;
+        for (j = position; j < ((*size)+1); j++)
+        {
+            ar[position+1] = arrayToMove[j-position];
+        }
+    } //end of else
 }
+	/*end_edit*/
+
+
 void iremove(int *size, int ar[], int num)
 {
 	/*edit*/

@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1603440011 source:c:\.programming\c\cz1103-c\assignment1\compress2d\compress2d.c
+	<stdio.h>
+

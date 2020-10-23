@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1603438317 source:c:\.programming\c\cz1103-c\week10\tut3.c
+	<stdio.h>
+	<math.h>
+	<stdio.h>
+
