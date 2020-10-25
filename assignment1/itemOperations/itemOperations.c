@@ -92,7 +92,7 @@ void insert(int max, int *size, int ar[], int num)
     {
         int temp;
         int i;
-        int position;
+        int position = -1;
         int hasNotFound = 1;
         for (i = 0; i < *size; i++) //for every element in the array...
         {
@@ -100,8 +100,10 @@ void insert(int max, int *size, int ar[], int num)
             {
                 position = i;
                 hasNotFound = 0;
+                //break;
             }
             else if (hasNotFound) //the num is bigger than any number currently in the array: put at the end of the array.
+            //if (position == -1)
             {
                 position = i+1;
             }
@@ -152,7 +154,7 @@ void iremove(int *size, int ar[], int num)
    else //attempt to find the number
    {
        int numberFound = 0;
-       int position;
+       int position = -1;
        int i;
        for (i = 0; i < *size; i++)//through iteration
        {
@@ -163,6 +165,7 @@ void iremove(int *size, int ar[], int num)
            }
        }
        if (numberFound == 0) //iterated alr, cannot find
+       //if (position == -1)
        {
            printf("The number is not in the array\n");
        }
