@@ -91,9 +91,9 @@ void insert(int max, int *size, int ar[], int num)
     else
     {
         int temp;
-        int i;
         int position = -1;
         int hasNotFound = 1;
+        int i;
         for (i = 0; i < *size; i++) //for every element in the array...
         {
             if (num <= ar[i] && hasNotFound) // current number pointed to is the place to put num in and the position hasn't already been found
