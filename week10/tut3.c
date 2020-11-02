@@ -133,7 +133,7 @@ int main()
 //*/
 
 /* Q3 */
-///*
+/*
 #include <stdio.h>
 #define SIZE 10
 

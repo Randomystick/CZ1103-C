@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1604300154 source:c:\.programming\c\cz1103-c\week11\tut4.c
+	<stdio.h>
+
+1604304694 source:c:\.programming\c\cz1103-c\week11\lab4.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<stdio.h>
+	<string.h>
+	<stdio.h>
+	<string.h>
+
