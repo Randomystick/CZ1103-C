@@ -31,6 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="lab5.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="tut5.c">
 			<Option compilerVar="CC" />
 		</Unit>

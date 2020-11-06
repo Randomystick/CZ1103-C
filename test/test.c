@@ -7,9 +7,12 @@
 int main()
 
 {
-    char* s1 = "aaa";
-    char* s2 = "z";
-    int lol = strcmp(s1,s2);
-    printf("%d", lol);
+    char* str;
+    char str2[10];
+    fgets(str2, 10, stdin);
+    printf("str is %s", str2);
+    printf("stringg");
+    printf("ss");
+    str[i] = *(str+i);
 
 }

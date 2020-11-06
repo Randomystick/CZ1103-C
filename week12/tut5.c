@@ -1,4 +1,4 @@
-int main(){}
+//int main(){}
 /* Q1 */
 /*
 #include <stdio.h>
@@ -6,12 +6,13 @@ int main(){}
 // Q1a
 int intersect(struct circle c1, struct circle c2)
 {
-    float distance = pow((c1.x - c2.x),2) + pow((c1.y - c2.y),2);
+    float distance = sqrt( pow((c1.x - c2.x),2) + pow((c1.y - c2.y),2) );
     if (distance <= (c1.radius+c2.radius)) //intersects
     {
         return 1;
     }
     return 0;
+    ANS: just return (distance <= (c1.radius+c2.radius))
 }
 
 // Q1b
@@ -74,8 +75,10 @@ void getInput(leaveRecord list[], int *n)
     char buffer[999];
     *n = 0;
     while (fgets(buffer, sizeof(buffer), stdin) != NULL)
+    ANS: using != NULL is not safe as different compilers handle stdin differently.
+    ANS: the answer given is to simply ask the user for number of inputs.
     {
-        sscanf(buffer, "%d %d %d", list[n].id, list[n].totalLeave, list[n].leaveTaken);
+        sscanf(buffer, "%d %d %d", &list[*n].id, &list[*n].totalLeave, &list[*n].leaveTaken);
         (*n)++;
     }
 }
