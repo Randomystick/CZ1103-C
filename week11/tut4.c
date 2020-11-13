@@ -50,6 +50,21 @@ int main()
 //*/
 
 /* Q4 */
+/*/////////////////////// ✅ SUGGESTED ANS:
+don't need to figure out who is longer. incorporate it in the comparison loop.
+while (1==1)
+{
+    if (*s1 == '\0' && *s2 == '\0') { return 0; } //they are equal
+    else if (*s1 == '\0') { return -1; } //s1 is shorter -> s1 has blank space -> blank space comes before anything else -> s1 is smaller than s2
+    else if (*s2 == '\0') { return 1; } //s2 is shorter -> s1 is bigger
+    
+    else if (*s1 < *s2) { return -1; }
+    else if (*s1 > *s2) { return 1; }
+    
+    s1++;
+    s2++;
+}
+/////////////////////////////////////////*/
 /*
 int stringcmp(char* s1, char* s2)
 {
@@ -97,7 +112,5 @@ int main()
 }
 
 //*/
-
-
 
 
