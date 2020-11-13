@@ -43,6 +43,9 @@ int findAr1D(int size, int ar[], int target)
 //*/
 
 /* Q2 */
+/*/////////////////////// ✅ SUGGESTED ANS:
+you don't even need to create temp[i], just a single temp variable will do.
+/////////////////////////////////////////*/
 /*
 #include <stdio.h>
 #define SIZE 3
@@ -132,7 +135,7 @@ void swap2Cols(int ar[][SIZE], int c1, int c2)
 //*/
 
 /* Q3 */
-///*
+/*
 #include <stdio.h>
 void printReverse1(int ar[], int size);
 void printReverse2(int ar[], int size);
