@@ -18,7 +18,7 @@ int intersect(struct circle c1, struct circle c2)
 // Q1b
 int contain(struct circle *c1, struct circle *c2)
 {
-    float distance = pow((c1->x - c2->x),2) + pow((c1->y - c2->y),2);
+    float distance = sqrt( pow((c1->x - c2->x),2) + pow((c1->y - c2->y),2) );
     if (c1->radius >= c2->radius + distance) //c1 contains c2
     {
         return 1;
@@ -101,7 +101,7 @@ int mayTakeLeave(leaveRecord list[], int d, int leave, int n)
         return -1;
     }
 
-    if (list[].leaveTaken + leave <= list[].totalLeave)
+    if (list[staffIndex].leaveTaken + leave <= list[staffIndex].totalLeave)
     {
         return 1;
     }
