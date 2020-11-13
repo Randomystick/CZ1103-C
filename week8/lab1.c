@@ -8,13 +8,13 @@
 // C    64-55
 // D    54-45
 // F    44-0
-// Use the sentinel value �1 for student ID to indicate the end of user input.
+// Use the sentinel value –1 for student ID to indicate the end of user input.
 // Use the switch statement
-//////////////////////////// ALTERNATIVE:
+/*////////////////////// ✅ SUGGESTED ANS:
 // use mark = mark+5, then divide by 10
 // mark can remain as int,
 // and don't need roundedMark as float
-////////////////////////////////////////
+//////////////////////////////////////////
 
 #include <stdio.h>
 #include <math.h> //round
@@ -81,8 +81,11 @@ int main()
 
 ///* QUESTION 2
 // Write a C program that reads in several lines of non-negative integer numbers,
-// computes the average for each line and prints out the average. The value �1 in each line
+// computes the average for each line and prints out the average. The value –1 in each line
 // of user input is used to indicate the end of input for that line.
+/*////////////////////// ✅ SUGGESTED ANS:
+Use %d not %i for integers (referred to as *d*igits)
+//////////////////////////////////////////
 
 #include <stdio.h>
 
@@ -94,8 +97,8 @@ int main()
     int sum =0;
     float avg =0;
     printf("Enter number of lines: ");
-    scanf("%i", &noOfLines);
-    fflush(stdin);
+    scanf("%d", &noOfLines);
+    //fflush(stdin); //note: cannot use in APAS
 
     // Run the average calculator noOfLines times
     int i; // MUST DECLARE ITERATOR BEFORE FOR LOOP
@@ -106,7 +109,7 @@ int main()
         sum = nmbrLength = 0;
 
         // Then prompt user for input
-        printf("Enter line %i (end with -1): ", i);
+        printf("Enter line %d (end with -1): ", i);
 
         // For every element the user keyed in...
         // do the math
@@ -114,18 +117,18 @@ int main()
         while (1==1)
         // while (nmbrValue != -1)
         {
-            scanf("%i", &nmbrValue);
+            scanf("%d", &nmbrValue);
             if (nmbrValue == -1) { break; }
             nmbrLength++;
-            //printf("number is %i\n", nmbrValue);
+            //printf("number is %d\n", nmbrValue);
 
             sum += nmbrValue;
-            //printf("sum is %i\n", sum);
+            //printf("sum is %d\n", sum);
         }
 
         // When -1 reached: print final avg value
         avg = (float)sum / nmbrLength;
-        //printf("nmbrLength is %i", nmbrLength);
+        //printf("nmbrLength is %d", nmbrLength);
         printf("Average = %f\n", avg);
 
         // END FOR ONE LINE
@@ -160,8 +163,8 @@ int main()
     int height = 0;
     int printer = 0;
     printf("Enter the height: ");
-    scanf("%i", &height);
-    //printf("height is %i", height);
+    scanf("%d", &height);
+    //printf("height is %d", height);
 
     printf("Pattern: \n");
     for (int i = 1; i < height+1; i++)
@@ -170,7 +173,7 @@ int main()
         if (printer==0) { printer +=3; }
         for (int j = 0; j<i; j++)
         {
-            printf("%i",printer);
+            printf("%d",printer);
         }
         printf("\n");
     }
@@ -186,6 +189,9 @@ int main()
 // Write a C program that computes the value of e^x
 // according to the following formula:
 // e^x = 1 + x/1! + x^2/2! + x^3/3! + ... + x^10/10!
+////////////////////// ✅ SUGGESTED ANS:
+instead of resetting denom, just *= j.
+////////////////////////////////////////
 
 #include <stdio.h>
 #include <math.h>
