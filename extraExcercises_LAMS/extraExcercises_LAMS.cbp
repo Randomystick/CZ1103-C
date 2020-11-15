@@ -31,6 +31,27 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="ar_absoluteSum1D.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ar_find2Max1D.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="minOfMax2D.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="platform1D.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ptrs_perfectProd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ptrs_power.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="str_countSubstring.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
