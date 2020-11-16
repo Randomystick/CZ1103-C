@@ -52,6 +52,18 @@
 		<Unit filename="str_countSubstring.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="str_insertChar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="str_locateFirstChar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="str_longWordLength.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="str_processString.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

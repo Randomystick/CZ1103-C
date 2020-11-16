@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 #define MAX 100
@@ -75,8 +76,8 @@ int readin(Employee *emp)
 {
     /* Write your code here */
     int i = 0;
-    //while (1==1)
-    //{
+    while (1==1)
+    {
         printf("Enter name: \n");
         do
         {
@@ -85,15 +86,15 @@ int readin(Employee *emp)
         char* p;
         if (p=strchr(emp[i].name, '\n'))
         {
-            //printf("eee");
             *p = '\0';
         }
-        printf("%s", emp[i].name);
+        //printf("%s", emp[i].name);
 
         if (strcmp(emp[i].name, "#") == 0)
         {
-            printf("break");
-            //break;
+            strcpy(emp[i].name, "\0");
+            //printf("break");
+            break;
         }
 
         printf("Enter tel: \n");
@@ -107,32 +108,87 @@ int readin(Employee *emp)
             //printf("fff");
             *pp = '\0';
         }
-        printf("%s", emp[i].telno);
+        //printf("%s", emp[i].telno);
 
         printf("Enter id: \n");
         scanf("%d", &emp[i].id);
-        printf("%d", emp[i].id);
-
-        //scanf("\n");
+        //printf("%d", emp[i].id);
 
         printf("Enter salary: \n");
-        //float salary = 0;
         scanf("%lf", &emp[i].salary);
-        printf("%lf", emp[i].salary);
-
+        //printf("%lf", emp[i].salary);
         i++;
-    //}
+    }
     //*/
-
     return i;
 }
 
 int search(Employee *emp, int size, char *target)
 {
     /* Write your code here */
+
+
+    int i;
+    for (i=0; i<size;i++)
+    {
+        if (strcmp(emp[i].name, target) == 0)
+        {
+            printf("Employee found at index location: %d\n", i);
+            printf("%s %s %d %.2lf\n", emp[i].name, emp[i].telno, emp[i].id, emp[i].salary);
+            return 1;
+        }
+    }
+
+    return 0;
 }
 
 int addEmployee(Employee *emp, int size, char *target)
 {
     /* Write your code here */
+    /*
+    char* nameToAdd[40];
+
+    printf("Enter new name:\n");
+    do
+    {
+        fgets(nameToAdd, 39, stdin);
+    } while (strcmp(nameToAdd, "\n") == 0);
+    char* p;
+    if (p=strchr(nameToAdd, '\n'))
+    {
+        *p = '\0';
+    }
+
+    if (search(emp, size, nameToAdd))
+    {
+        printf("Name already in database\n");
+        return size;
+    }
+    printf("nmame to add: %s", nameToAdd);
+    */
+
+    strcpy(emp[size].name, target);
+
+    printf("Enter tel:\n");
+    do
+    {
+        fgets(emp[size].telno, 39, stdin);
+    } while (strcmp(emp[size].telno, "\n") == 0);
+    char* pp;
+    if (pp=strchr(emp[size].telno, '\n'))
+    {
+        *pp = '\0';
+    }
+    printf("%s", emp[size].telno);
+
+    printf("Enter id:\n");
+    scanf("%d", &emp[size].id);
+
+    printf("Enter salary:\n");
+    scanf("%lf", &emp[size].salary);
+
+    printf("Added at position: %d\n", size);
+
+    size++;
+    return size;
 }

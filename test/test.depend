@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1601907352 source:c:\.programming\c\cz1103-c\test\test.c
+1605531914 source:c:\.programming\c\cz1103-c\test\test.c
 	<stdio.h>
+	<string.h>
 
